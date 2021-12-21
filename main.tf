@@ -9,6 +9,7 @@ provider "kubernetes" {
   }
 }
 
+
 provider "helm" {
   kubernetes {
     load_config_file       = false
@@ -66,7 +67,7 @@ resource "kubernetes_namespace" "argo-ns" {
 }
 
 resource "helm_release" "argocd" {
-  name       = "msur"
+  name       = "mmsur"
   chart      = "argo-cd"
   repository = "https://argoproj.github.io/argo-helm"
   namespace  = "argocd"
